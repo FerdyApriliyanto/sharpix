@@ -10,10 +10,13 @@ class ApiService {
 
   ApiService(dio) {
     // AVD
-    _dio.options.baseUrl = 'http://10.0.2.2:5000/';
+    // _dio.options.baseUrl = 'http://10.0.2.2:5000/';
 
     // NON AVD
     // _dio.options.baseUrl = 'http://127.0.0.1:5000/';
+
+    // RAILWAY
+    _dio.options.baseUrl = 'https://flask-production-1deb.up.railway.app/';
   }
 
   Future<Uint8List?> sendImage(XFile file) async {
